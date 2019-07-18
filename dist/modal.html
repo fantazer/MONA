@@ -44,9 +44,9 @@
         <div class="footer-top-wrap">
             <div class="main-cont">
                 <div class="footer-top">
-                    <div class="footer-top__logo">
+                    <a class="footer-top__logo" href="/">
                         <img src="img/logo.png" alt="" />
-                    </div>
+                    </a>
                     <a class="header-top-phone" href="tel:">
                         <div class="header-top-phone__icon">
                             <svg class="icon">
@@ -106,61 +106,7 @@
         </div>
     </div>
     <!--block footer end-->
-    <div class="modal-layer">
-        <div class="modal-filter"></div>
-        <div class="modal-wrap">
-            <div class="modal" data-modal="order">
-                <div class="modal-content">
-                    <div class="modal-close">
-                        <svg class="icon">
-                            <use xlink:href="#close"></use>
-                        </svg>
-                    </div>
-                    <div class="modal-title">Оставьте заявку</div>
-                    <div class="modal-text">Обращаетесь к нам впервые?
-                        <br>Оформите обращение с помощью этой формы, мы перезвоним Вам и проконсультируем по любому Вашему вопросу совершенно бесплатно!</div>
-                    <form class="validate-form" action="javascript:void(null);">
-                        <div class="input-row">
-                            <input class="input" type="text" name="name" placeholder="Ваше имя" />
-                        </div>
-                        <div class="input-row">
-                            <input class="input" type="text" name="phone" placeholder="Ваш телефон" />
-                        </div>
-                        <div class="input-row">
-                            <textarea class="input" name="info" cols="30" rows="5" placeholder="Сообщение"></textarea>
-                        </div>
-                        <div class="agree-row">
-                            <div class="check-el">
-                                <label class="style-label style-label--checkbox">
-                                    <input class="sytle-input" type="checkbox" name="agree" />
-                                    <div class="sytle-input-element">
-                                        <svg class="icon-check">
-                                            <use xlink:href="#checked"></use>
-                                        </svg>
-                                    </div>
-                                    <div class="sytle-input-text"></div>
-                                </label>
-                            </div>
-                            <div class="agree-row__text">Согласен с
-                                <a href="#">условиями обработки персональных данных</a>
-                            </div>
-                        </div>
-                        <input class="modal-send" type="submit" value="Отправить заявку" />
-                    </form>
-                </div>
-            </div>
-            <!--success message-->
-            <div class="modal" data-modal="truemessage">
-                <div class="modal-content modal-content--true">
-                    <svg class="icon">
-                        <use xlink:href="#interface"></use>
-                    </svg>
-                    <div class="modal-text-true">Ваша заявка принята</div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <a class="modal-get" href="#" data-modal="order">Открыть модальное окно</a>
+    <!--+modal()-->
     <script src="js/combined.js"></script>
     <script src="js/add-on.js"></script>
     <script src="js/script.js"></script>

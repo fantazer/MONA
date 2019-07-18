@@ -130,6 +130,22 @@ $('.main-slider').slick({
 });
 // main-slider === end
 
+// content-slider
+$('.content-slider').slick({
+    slidesToShow: 1,
+    speed: 500,
+    arrows: false,
+    customPaging : function(slider, i) {
+				return '<span class="dot"></span>';
+    },
+    dots:true,
+    //autoplay: true,
+    //dots:false,
+    //fade: true
+    //autoplaySpeed: 8000, time between
+});
+// content-slider === end
+
 // slider nav
 	 $('.slider-control--right').click(function(){
 			$(this).closest(".slider-wrap").find(".slider-item").slick('slickNext');

@@ -4,11 +4,58 @@ include block_html/_include.pug
 .page
 	+header()
 	.content
-		.section
+		.section.section--clear.section--dark
 			.main-cont
+				.bread
+					-
+						var items = ['Главная','Категория','Страница'];
+					each item in items
+						a(href="#").bread__el #{item}
 				.section-title-row
 					.section-title
-						span Путь к Вашему комфорту
+						span О компании
 						.section-title-line
+					.section-title-sub Традиции компании
+				//user class .text for typography text style
+				.text
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium aliquam enim illum iste odit placeat quasi sed unde vero!
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi consectetur delectus deleniti eligendi enim eum harum illum odit quis temporibus. Dicta et itaque mollitia necessitatibus officiis perferendis qui, quo ratione repellat repellendus! Aliquam consectetur et eveniet, nobis pariatur repellat rerum!
+					ul
+						li элемент 1
+						li элемент 2
+						li элемент 3
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad beatae earum expedita pariatur quisquam repellat veniam! Aliquid animi culpa, debitis dicta distinctio laudantium magnam minus odit officia porro quam, recusandae.
+
+				.main-slider-wrap.slider-wrap
+
+					.slider-control.slider-control--left
+						+icon("arrow-left","icon")
+					.slider-control.slider-control--right
+						+icon("arrow-right","icon")
+					.content-slider.slider-item
+						- for (var i=0;i<4;i++)
+							.content-slider__el-cont
+								.filter
+								div(style="background-image:url('img/main-slider-1.jpg')" class="content-slider__el")
+								.content-slider__el-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores consectetur dolor dolore et, harum libero molestias omnis placeat quis voluptates.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores consectetur dolor dolore et, harum libero molestias omnis placeat quis voluptates.
+
+		.section
+			.main-cont
+				.contact
+					.contact-info(style="background-image:url('img/item-4.jpg')")
+						.filter
+						.contact-info__title Хотите комфортную мебель?
+						.contact-info__text Оставьте заявку на дизайн-проект!
+					.contact-form
+						form(action="#")
+							.input-row
+								input(type="text" placeholder="Имя" class="input")
+							.input-row
+								input(type="text" placeholder="Ваш телефон" class="input")
+							.input-row
+								input(type="text" placeholder="Ваш email" class="input")
+							.input-row
+								textarea(name="", cols="30", rows="5" placeholder="Ваш коментарий" class="input")
+								input(type="submit" value="Отправить" class="btn--md btn--mark")
 	+footer()
 include ./block_html/_script.pug

@@ -1,180 +1,176 @@
 include block_html/_style.pug
 include block_html/_include.pug
 
-+header()
-
-
-.main-slider-wrap.slider-wrap
-	.filter
-	.slider-control.slider-control--left
-		+icon("arrow-left","icon")
-	.slider-control.slider-control--right
-		+icon("arrow-right","icon")
-	.main-slider.slider-item
-		a(href="#" style="background-image:url('img/main-slider-1.jpg')" class="main-slider__el")
-		a(href="#" style="background-image:url('img/main-slider-1.jpg')" class="main-slider__el")
-
-
-.section
-	.main-cont
-		.section-title-row
-			.section-title
-				span Путь к Вашему комфорту
-				.section-title-line
-		.advant
-			.advant__el
-				.advant__el-icon
-					+icon("paint--color","icon")
-				.advant__el-cont
-					.advant__el-title 1. Первый эскиз
-					.advant__el-text Встреча с дизайнером, выбор стиля, цвета, материалов Вашей мебели. Первый эскиз.
-			.advant__el
-				.advant__el-icon
-					+icon("project--color","icon")
-				.advant__el-cont
-					.advant__el-title 2. Визуализацию проекта
-					.advant__el-text Подписание договора. После внесения предоплаты, мастер производит замер, дизайнер делает визуализацию проекта.
-			.advant__el
-				.advant__el-icon
-					+icon("worker-color","icon")
-				.advant__el-cont
-					.advant__el-title 3. Производство мебели
-					.advant__el-text По согласованному Вами проекту начинается производство мебели в срок до 45 раб-х дней.
-			.advant__el
-				.advant__el-icon
-					+icon("tools--color","icon")
-				.advant__el-cont
-					.advant__el-title 4. Установка мебели
-					.advant__el-text Установка мебели. Гарантия 1 год и пост - гарантийное обслуживание.
-			.advant__el.advant__el--slogan
-				.advant__el-icon
-					+icon("like--color","icon")
-				.advant__el-cont
-					.advant__el-slogan Вы - довольный клиент
-
-.section.section--dark
-	.main-cont
-		.section-title-row
-			.section-title
-				span Элементы комфорта
-				.section-title-line
-		.list
-			a(href="#").list__el
-				.list__el-img(style="background-image:url('img/list-1.jpg')")
-				.list__el-content
-					.list__el-title До мелочей
-					.list__el-text Изделия продуманы до мелочей и каждой детали
-			a(href="#").list__el
-				.list__el-img(style="background-image:url('img/list-2.jpg')")
-				.list__el-content
-					.list__el-title Работы под ключ
-					.list__el-text Готовые изделия с использованием под ключ
-			a(href="#").list__el
-				.list__el-img(style="background-image:url('img/list-3.jpg')")
-				.list__el-content
-					.list__el-title Прямые поставщики
-					.list__el-text Прямые поставки материалов, комплектующих (техники)
-			a(href="#").list__el
-				.list__el-img(style="background-image:url('img/list-4.jpg')")
-				.list__el-content
-					.list__el-title Внимание ко всему
-					.list__el-text Изделия продуманы до мелочей и каждой детали
-			a(href="#").list__el
-				.list__el-img(style="background-image:url('img/list-5.jpg')")
-				.list__el-content
-					.list__el-title Качество материалов
-					.list__el-text Готовые изделия с использованием под ключ
-			a(href="#").list__el
-				.list__el-img(style="background-image:url('img/list-6.jpg')")
-				.list__el-content
-					.list__el-title Большой опыт
-					.list__el-text Прямые поставки материалов, комплектующих (техники)
-
-.section
-	.main-cont
-		.section-title-row
-			.section-title
-				span Распродажа
-				.section-title-line
-		.slider-wrap
+.page
+	+header()
+	.content
+		.main-slider-wrap.slider-wrap
+			.filter
 			.slider-control.slider-control--left
 				+icon("arrow-left","icon")
 			.slider-control.slider-control--right
 				+icon("arrow-right","icon")
-			.sale.slider-extend.slider-item
-				- for (var i=0;i<3;i++)
-					a(href="#").sale__el
-						.sale__el-more
-							.sale__el-more-cont
-								.sale__el-more-icon
-									+icon("file","icon")
-								.sale__el-more-text Подробнее
-						.sale__el-img(style="background-image:url('img/item-2.jpg')")
-					a(href="#").sale__el
-						.sale__el-more
-							.sale__el-more-cont
-								.sale__el-more-icon
-									+icon("file","icon")
-								.sale__el-more-text Подробнее
-						.sale__el-img(style="background-image:url('img/item-4.jpg')")
-					a(href="#").sale__el
-						.sale__el-more
-							.sale__el-more-cont
-								.sale__el-more-icon
-									+icon("file","icon")
-								.sale__el-more-text Подробнее
-						.sale__el-img(style="background-image:url('img/item-3.jpg')")
+			.main-slider.slider-item
+				a(href="#" style="background-image:url('img/main-slider-1.jpg')" class="main-slider__el")
+				a(href="#" style="background-image:url('img/main-slider-1.jpg')" class="main-slider__el")
 
-.section.section--dark
-	.main-cont
-		.section-title-row
-			.section-title
-				span Дизайнеры
-				.section-title-line
-		.designer
-			a(href="#" style="background-image:url('img/user-1.jpg')").designer__el
-				.designer__el-info
-					.filter
-					.designer__el-name Виктор Попов
-					.designer__el-state Дизайнер
-			a(href="#" style="background-image:url('img/user-2.jpg')").designer__el
-				.designer__el-info
-					.filter
-					.designer__el-name Дмитрий Семенов
-					.designer__el-state Проэктировщик
-			a(href="#" style="background-image:url('img/user-3.jpg')").designer__el
-				.designer__el-info
-					.filter
-					.designer__el-name Алексндр Климов
-					.designer__el-state Архитектор
-			a(href="#" style="background-image:url('img/user-4.jpg')").designer__el
-				.designer__el-info
-					.filter
-					.designer__el-name Семен Архипов
-					.designer__el-state Менеджер
-		.btn-row-mid
-			a(href="#").designer-all Все дизайнеры
+		.section
+			.main-cont
+				.section-title-row
+					.section-title
+						span Путь к Вашему комфорту
+						.section-title-line
+				.advant
+					.advant__el
+						.advant__el-icon
+							+icon("paint--color","icon")
+						.advant__el-cont
+							.advant__el-title 1. Первый эскиз
+							.advant__el-text Встреча с дизайнером, выбор стиля, цвета, материалов Вашей мебели. Первый эскиз.
+					.advant__el
+						.advant__el-icon
+							+icon("project--color","icon")
+						.advant__el-cont
+							.advant__el-title 2. Визуализацию проекта
+							.advant__el-text Подписание договора. После внесения предоплаты, мастер производит замер, дизайнер делает визуализацию проекта.
+					.advant__el
+						.advant__el-icon
+							+icon("worker-color","icon")
+						.advant__el-cont
+							.advant__el-title 3. Производство мебели
+							.advant__el-text По согласованному Вами проекту начинается производство мебели в срок до 45 раб-х дней.
+					.advant__el
+						.advant__el-icon
+							+icon("tools--color","icon")
+						.advant__el-cont
+							.advant__el-title 4. Установка мебели
+							.advant__el-text Установка мебели. Гарантия 1 год и пост - гарантийное обслуживание.
+					.advant__el.advant__el--slogan
+						.advant__el-icon
+							+icon("like--color","icon")
+						.advant__el-cont
+							.advant__el-slogan Вы - довольный клиент
 
-.section
-	.main-cont
-		.contact
-			.contact-info(style="background-image:url('img/item-4.jpg')")
-				.filter
-				.contact-info__title Хотите комфортную мебель?
-				.contact-info__text Оставьте заявку на дизайн-проект!
-			.contact-form
-				form(action="#")
-					.input-row
-						input(type="text" placeholder="Имя" class="input")
-					.input-row
-						input(type="text" placeholder="Ваш телефон" class="input")
-					.input-row
-						input(type="text" placeholder="Ваш email" class="input")
-					.input-row
-						textarea(name="", cols="30", rows="5" placeholder="Ваш коментарий" class="input")
-						input(type="submit" value="Отправить" class="btn--md btn--mark")
+		.section.section--dark
+			.main-cont
+				.section-title-row
+					.section-title
+						span Элементы комфорта
+						.section-title-line
+				.list
+					a(href="#").list__el
+						.list__el-img(style="background-image:url('img/list-1.jpg')")
+						.list__el-content
+							.list__el-title До мелочей
+							.list__el-text Изделия продуманы до мелочей и каждой детали
+					a(href="#").list__el
+						.list__el-img(style="background-image:url('img/list-2.jpg')")
+						.list__el-content
+							.list__el-title Работы под ключ
+							.list__el-text Готовые изделия с использованием под ключ
+					a(href="#").list__el
+						.list__el-img(style="background-image:url('img/list-3.jpg')")
+						.list__el-content
+							.list__el-title Прямые поставщики
+							.list__el-text Прямые поставки материалов, комплектующих (техники)
+					a(href="#").list__el
+						.list__el-img(style="background-image:url('img/list-4.jpg')")
+						.list__el-content
+							.list__el-title Внимание ко всему
+							.list__el-text Изделия продуманы до мелочей и каждой детали
+					a(href="#").list__el
+						.list__el-img(style="background-image:url('img/list-5.jpg')")
+						.list__el-content
+							.list__el-title Качество материалов
+							.list__el-text Готовые изделия с использованием под ключ
+					a(href="#").list__el
+						.list__el-img(style="background-image:url('img/list-6.jpg')")
+						.list__el-content
+							.list__el-title Большой опыт
+							.list__el-text Прямые поставки материалов, комплектующих (техники)
 
+		.section
+			.main-cont
+				.section-title-row
+					.section-title
+						span Распродажа
+						.section-title-line
+				.slider-wrap
+					.slider-control.slider-control--left
+						+icon("arrow-left","icon")
+					.slider-control.slider-control--right
+						+icon("arrow-right","icon")
+					.sale.slider-extend.slider-item
+						- for (var i=0;i<3;i++)
+							a(href="#").sale__el
+								.sale__el-more
+									.sale__el-more-cont
+										.sale__el-more-icon
+											+icon("file","icon")
+										.sale__el-more-text Подробнее
+								.sale__el-img(style="background-image:url('img/item-2.jpg')")
+							a(href="#").sale__el
+								.sale__el-more
+									.sale__el-more-cont
+										.sale__el-more-icon
+											+icon("file","icon")
+										.sale__el-more-text Подробнее
+								.sale__el-img(style="background-image:url('img/item-4.jpg')")
+							a(href="#").sale__el
+								.sale__el-more
+									.sale__el-more-cont
+										.sale__el-more-icon
+											+icon("file","icon")
+										.sale__el-more-text Подробнее
+								.sale__el-img(style="background-image:url('img/item-3.jpg')")
 
+		.section.section--dark
+			.main-cont
+				.section-title-row
+					.section-title
+						span Дизайнеры
+						.section-title-line
+				.designer
+					a(href="#" style="background-image:url('img/user-1.jpg')").designer__el
+						.designer__el-info
+							.filter
+							.designer__el-name Виктор Попов
+							.designer__el-state Дизайнер
+					a(href="#" style="background-image:url('img/user-2.jpg')").designer__el
+						.designer__el-info
+							.filter
+							.designer__el-name Дмитрий Семенов
+							.designer__el-state Проэктировщик
+					a(href="#" style="background-image:url('img/user-3.jpg')").designer__el
+						.designer__el-info
+							.filter
+							.designer__el-name Алексндр Климов
+							.designer__el-state Архитектор
+					a(href="#" style="background-image:url('img/user-4.jpg')").designer__el
+						.designer__el-info
+							.filter
+							.designer__el-name Семен Архипов
+							.designer__el-state Менеджер
+				.btn-row-mid
+					a(href="#").designer-all Все дизайнеры
 
-+footer()
+		.section
+			.main-cont
+				.contact
+					.contact-info(style="background-image:url('img/item-4.jpg')")
+						.filter
+						.contact-info__title Хотите комфортную мебель?
+						.contact-info__text Оставьте заявку на дизайн-проект!
+					.contact-form
+						form(action="#")
+							.input-row
+								input(type="text" placeholder="Имя" class="input")
+							.input-row
+								input(type="text" placeholder="Ваш телефон" class="input")
+							.input-row
+								input(type="text" placeholder="Ваш email" class="input")
+							.input-row
+								textarea(name="", cols="30", rows="5" placeholder="Ваш коментарий" class="input")
+								input(type="submit" value="Отправить" class="btn--md btn--mark")
+	+footer()
 include ./block_html/_script.pug
