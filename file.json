@@ -4,6 +4,16 @@
 		"footer":"footer"
 	},
 	"page":{
-		"index":"index"
+		"index":"index",
+		"about":"about",
+		"contact":"contact",
+		"catalog":"catalog",
+		"production":"production",
+		"catalog-part":"catalog-part",
+		"item":"item",
+		"designers":"designers",
+		"material":"material",
+		"news":"news",
+		"designers-item":"designers-item"
 	}
 }
