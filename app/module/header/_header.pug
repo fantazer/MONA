@@ -1,0 +1,33 @@
+mixin header()
+	//block header
+	.header
+		.header-top-cont
+			.main-cont
+				.header-top
+					a(href="#").logo
+						img(src="img/logo.png", alt="")
+					a(href="tel:").header-top-phone
+						.header-top-phone__icon
+							+icon("phone-call","icon")
+						.header-top-phone__val 8 800 000 00 00
+					.soc-row
+						-
+							var items = [
+							'soc-facebook',
+							'soc-instagram',
+							'soc-youtube'
+							];
+						each item in items
+							a(href="#").soc-row__el
+								svg(class='icon')
+									use(xlink:href="#" + item)
+					.header-top-callback Заказать звонок
+		.nav-cont
+			.main-cont
+				.nav
+					a(href="#").nav__el Каталог
+					a(href="#").nav__el О компании
+					a(href="#").nav__el Производство
+					a(href="#").nav__el Контакты
+
+	//block header end

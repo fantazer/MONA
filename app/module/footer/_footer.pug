@@ -1,0 +1,45 @@
+mixin footer()
+	//block footer
+	.footer
+		.footer-top-wrap
+			.main-cont
+				.footer-top
+					.footer-top__logo
+						img(src="img/logo.png", alt="")
+					a(href="tel:").header-top-phone
+						.header-top-phone__icon
+							+icon("phone-call","icon")
+						.header-top-phone__val 8 800 000 00 00
+					.soc-row
+						-
+							var items = [
+							'soc-facebook',
+							'soc-instagram',
+							'soc-youtube'
+							];
+						each item in items
+							a(href="#").soc-row__el
+								svg(class='icon')
+									use(xlink:href="#" + item)
+		.nav-cont
+			.main-cont
+				.nav
+					a(href="#").nav__el Каталог
+					a(href="#").nav__el О компании
+					a(href="#").nav__el Производство
+					a(href="#").nav__el Контакты
+		.main-cont
+			.footer-location
+				.footer-location__col
+					span г. Новосибирск,
+					span ул. Урицкого, 6
+					span Телефон: (383) 363-22-02
+				.footer-location__col
+					span г. Новосибирск,
+					span ул. Светлановская, 50
+					span Телефон: (383) 230 57 97
+				.footer-location__col
+					span г. Бердск,
+					span ул. Ленина, 27
+					span Телефон: (383) 31-108-31
+	//block footer end
