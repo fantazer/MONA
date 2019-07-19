@@ -56,12 +56,11 @@ body
 	+below(768px)
 		width: 100%
 		box-shadow 0 0 0
-	box-shadow 0 2px 4px rgba(0, 0, 0, 0.24)
 	transform translateY(-350%)
 	position: absolute
 	opacity .1
 	transition transform .8s, opacity 1s
-	max-width 470px
+	max-width 400px
 	.order__row
 		margin-bottom: 20px
 		border-bottom 0
@@ -75,7 +74,7 @@ body
 	background: white
 	position: relative
 	padding: 40px
-	br(10px)
+	border-radius 0 100px
 
 .modal__show
 	max-height 100%
@@ -88,13 +87,12 @@ body
 		top 12px
 		right 12px
 	position: absolute
-	top: 20px
-	right: 20px
+	top: 0px
+	right: 0px
 	cp()
 	.icon
-		size 12px
-		fill black
-		opacity:.3
+		size 16px
+		fill white
 
 .modal-open
 	overflow: hidden
@@ -117,7 +115,9 @@ body
 		font-size: 20px
 	margin-bottom: 20px
 	text-align: center
-	color black
+	color $mark
+	@extend .type--lgx
+	font-weight: 900
 
 .modal-text
 	+below(768px)
@@ -171,13 +171,18 @@ body
 	fl()
 	br(10px)
 	.icon
-		fill green
+		fill $mark
 		size 120px
 		margin-bottom: 20px
+	.modal-text
+		margin-bottom: 0
 
 .modal-text-true
 	text-align: center
 	font-weight: bold
+	color $mark
+	@extend .type--lg
+
 
 //modal===end
 
@@ -391,6 +396,8 @@ select.select-beauty
 	color $mark
 	font-size 24px
 	font-weight: 900
+	display: inline-block
+	tr()
 
 .header-top-callback
 	@extend .btn--md
@@ -528,7 +535,10 @@ select.select-beauty
 	bsh-hover()
 	overflow: hidden
 	cp()
+	tr()
 	border 1px solid #f6f6f6
+
+
 .list__el-img
 	bg-full()
 	padding: 35% 10%
@@ -613,11 +623,15 @@ select.select-beauty
 	bsh-hover()
 	overflow: hidden
 	cp()
-	border 1px solid #f6f6f6
 	position: relative
 	bg-full()
+	bsh()
 	padding: 70% 10%
-
+	tr()
+	transform scale(1)
+	&:hover
+		box-shadow 0px 8px 30px #bebaba
+		transform scale(1.02)
 .designer__el-info
 	position: absolute
 	bottom: 0
@@ -940,3 +954,132 @@ select.select-beauty
 
 .item-config
 	max-width 768px
+
+.designer-cont
+	margin-bottom: 50px
+.designer-title
+	@extend .type--lgx
+	font-weight: 700
+	color black
+	margin-bottom: 10px
+.designer-location
+	margin-bottom: 20px
+.designer-get
+	link()
+	margin-bottom: 30px
+	display: inline-block
+
+
+.material
+	f()
+	justify-content: space-between
+	align-items: flex-start
+.toolbar
+	width: 300px
+	border 1px solid $border-color
+	background: white
+.toolbar-head
+	display: block
+	padding: 15px 25px
+	font-weight:700
+	color black
+	@extend .type--md
+	border-bottom 1px solid $border-color
+.toolbar-el
+	border-bottom 1px solid $border-color
+	tr()
+	padding: 15px 25px
+	display: block
+	margin-bottom: -1px
+	&:hover
+		background: #e0d0e9
+.toolbar-el--active
+	background: #e0d0e9
+	position: relative
+	font-weight: 700
+	&:before
+		content ''
+		size 6px
+		round()
+		position: absolute
+		left 10px
+		top 20px
+		background: black
+.material-cont
+	width calc(100% - 400px)
+.material-descr
+	f()
+	justify-content: space-between
+	align-items: flex-start
+	margin-bottom: 30px
+.material-info
+	margin-bottom: 80px
+.material-text
+	width calc(100% - 150px)
+.material-title
+	@extend .type--lg
+	font-weight: 700
+	margin-bottom: 20px
+	color $mark
+.material-logo
+	size 120px
+	bsh()
+	br(10px)
+	bg-full()
+	background-size: contain
+	background-color: white
+	border 10px solid white
+
+.news__el
+	f()
+	justify-content: space-between
+	align-items: flex-start
+	margin-bottom: 40px
+.news__el-img
+	width: 35%
+	bg-full()
+	padding: 15% 10%
+.news__el-cont
+	width calc(65% - 40px)
+.news__el-title
+	@extend .type--lgx
+	margin-bottom: 10px
+	font-weight: 700
+	color black
+	display: inline-block
+.news__el-date
+	margin-bottom: 30px
+
+
+.staff
+	f()
+	justify-content: space-between
+	align-items: flex-start
+	margin-bottom: 40px
+.staff__el-img
+	width: 35%
+	bg-full()
+	padding: 20% 10%
+	overflow: hidden
+	background-position: top center
+	br(10px)
+.staff__el-cont
+	width calc(60% - 40px)
+.staff__el-title
+	@extend .type--lgx
+	margin-bottom: 10px
+	font-weight: 700
+	color black
+	display: inline-block
+
+.staff__el-loc
+	margin-bottom: 30px
+.staff__el-info
+	flex(between)
+	margin-bottom: 30px
+.staff__el-phone
+	f()
+	align-items: center
+.staff__el-get
+	@extend .btn--md
+	@extend .btn--mark

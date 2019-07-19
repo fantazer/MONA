@@ -1,0 +1,48 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+header()
+	.content
+		.section.section--clear
+			.main-cont
+				.bread
+					-
+						var items = ['Главная','Категория','Страница'];
+					each item in items
+						a(href="#").bread__el #{item}
+				.section-title-row
+					.section-title
+						span Дизайнеры
+						.section-title-line
+					.section-title-sub Они создают комфорт
+
+				- for (var i=0;i<3;i++)
+					.designer-cont
+						.designer-title Салон «МОНА» MILK House
+						.designer-location г. Новосибирск, ул. Урицкого, 6
+						a(href="#").designer-get Как добраться
+
+						.designer
+							a(href="#" style="background-image:url('img/user-1.jpg')").designer__el
+								.designer__el-info
+									.filter
+									.designer__el-name Виктор Попов
+									.designer__el-state Дизайнер
+							a(href="#" style="background-image:url('img/user-2.jpg')").designer__el
+								.designer__el-info
+									.filter
+									.designer__el-name Дмитрий Семенов
+									.designer__el-state Проэктировщик
+							a(href="#" style="background-image:url('img/user-3.jpg')").designer__el
+								.designer__el-info
+									.filter
+									.designer__el-name Алексндр Климов
+									.designer__el-state Архитектор
+							a(href="#" style="background-image:url('img/user-4.jpg')").designer__el
+								.designer__el-info
+									.filter
+									.designer__el-name Семен Архипов
+									.designer__el-state Менеджер
+	+footer()
+include ./block_html/_script.pug

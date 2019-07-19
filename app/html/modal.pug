@@ -14,14 +14,23 @@ style(type='text/css').
 		align-items: baseline;
 	}
 
+.page
+	+header()
+	.content
+		.section.section--dark
+			.main-cont.text
+				.section-title-row
+					.section-title
+						span Модальные окна
+						.section-title-line
+				p Чтобы вызвать нужное окно добавь на элемент класс .modal-get и data-modal="имя окна"
+				p Чтобы добавить метод закрытия окна по клику на элемент добавиь класс .modal-send
+				p Методы в JS = > closeModal() - закрыть окна initModal('имя окна') - Открыть нужное окно
+				.btn-wrap
+					.btn--md.btn--mark.modal-get(data-modal="order") Заявка | data-modal="order "
+					.btn--md.btn--mark.modal-get(data-modal="callback") Обратный звонок | data-modal="callback"
+					.btn--md.btn--mark.modal-get(data-modal="truemessage") Успешное действие | data-modal="truemessage"
+	+footer()
 
-.main-cont
-	p Чтобы вызвать нужное окно добавь на элемент класс .modal-get и data-modal="имя окна"
-	p Чтобы добавить метод закрытия окна по клику на элемент добавиь класс .modal-send
-	.btn-wrap
-		.btn--md.btn--mark.modal-get(data-modal="order") Заявка | data-modal="code "
-
-+footer()
-//+modal()
 
 include ./block_html/_script.pug

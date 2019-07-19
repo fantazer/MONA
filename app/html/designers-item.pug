@@ -1,0 +1,56 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+header()
+	.content
+		.section.section--dark.section--clear
+			.main-cont
+				.bread
+					-
+						var items = ['Главная','Категория','Страница'];
+					each item in items
+						a(href="#").bread__el #{item}
+				.section-title-row
+					.section-title
+						span Дизайнер
+						.section-title-line
+					.section-title-sub Елизавета Иванова
+
+				.staff
+					.staff__el-img(style="background-image:url('img/user-1.jpg')")
+					.staff__el-cont
+						a(href="#").staff__el-title Салон «МОНА» MILK House
+						.staff__el-loc г. Новосибирск, ул. Урицкого, 6
+						.staff__el-info
+							a(href="tel:8 800 000 00 00").staff__el-phone
+								.header-top-phone__icon
+									+icon("phone-call","icon")
+								.header-top-phone__val 8 800 000 00 00
+							.staff__el-get Заказать звонок
+
+						h3.type--lg.type--bold Стаж работы
+						.text
+							ul
+								li Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci animi cumque dolorum earum, modi nemo quisquam rerum similique vel!
+								li Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci animi cumque dolorum earum, modi nemo quisquam rerum similique vel!
+								li Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci animi cumque dolorum earum, modi nemo quisquam rerum similique vel!
+			.section
+				.main-cont
+					.section-title-row
+						.section-title
+							span Портфолио
+							.section-title-line
+					.slider-wrap
+						.slider-control.slider-control--left
+							+icon("arrow-left","icon")
+						.slider-control.slider-control--right
+							+icon("arrow-right","icon")
+						.slider-items.slider-extend.slider-item
+							- for (var i=0;i<6;i++)
+								a(href="#").catalog__el
+									.catalog__el-img(style="background-image:url('img/item-3.jpg')")
+									.catalog__el-content
+										.catalog__el-title.catalog__el-title--simple Классические кухни
+	+footer()
+include ./block_html/_script.pug

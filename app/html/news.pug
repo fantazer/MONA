@@ -1,0 +1,34 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+header()
+	.content
+		.section.section--dark.section--clear
+			.main-cont
+				.bread
+					-
+						var items = ['Главная','Категория','Страница'];
+					each item in items
+						a(href="#").bread__el #{item}
+				.section-title-row
+					.section-title
+						span Новости и акции
+						.section-title-line
+				.news
+					- for (var i=0;i<6;i++)
+						.news__el
+							.news__el-img(style="background-image:url('img/item-6.jpg')")
+							.news__el-cont
+								a(href="#").news__el-title Новый подходы к выравниванию стен
+								.news__el-date 09.12.2018
+								.news__el-text.text
+									p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque eos illo itaque nam necessitatibus nesciunt nisi perferendis porro possimus quos. Accusantium aliquid, deserunt dolores eveniet facilis necessitatibus provident ratione reprehenderit.
+									p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aperiam beatae delectus dolores magnam necessitatibus porro quo reprehenderit tenetur voluptate! Dolorum ex explicabo facere in inventore iure natus numquam, quas tempore unde. Accusamus, aliquam assumenda distinctio, ex fugit itaque laboriosam, non ratione rem sunt vel voluptas! Eum incidunt provident sit!
+				.pag
+					.pag__el.pag__el--active 1
+					.pag__el 2
+					.pag__el 3
+
+	+footer()
+include ./block_html/_script.pug

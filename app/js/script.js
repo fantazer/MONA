@@ -191,4 +191,17 @@ $(document).ready(function () {
 		$(this).addClass('tag__el--active');
 	});
 	// toggle tags === end
+
+	// init fancybox
+	$('.fancybox').fancybox({
+		thumbs : {
+			autoStart : true
+		},
+		buttons : [
+			'zoom',
+			'close'
+		]
+	});
+	// init fancybox === end
+
 });

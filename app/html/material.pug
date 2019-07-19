@@ -1,0 +1,59 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+header()
+	.content
+		.section.section--dark.section--clear
+			.main-cont
+				.bread
+					-
+						var items = ['Главная','Категория','Страница'];
+					each item in items
+						a(href="#").bread__el #{item}
+				.section-title-row
+					.section-title
+						span Материалы
+						.section-title-line
+					.section-title-sub Из чего состоит комфорт
+				.material
+					.toolbar
+						.toolbar-head Материалы
+						-
+							var items = [
+								'Фурнитура',
+								'Столешницы',
+								'Фурнитура',
+								'Освещение',
+								'Техника',
+								'Сантехника'
+								];
+						each item,i in items
+							a(href="#" class=i===1?'toolbar-el--active':'').toolbar-el #{item}
+
+					.material-cont
+						- for (var i=0;i<5;i++)
+							.material-info
+								.material-descr
+									.material-text.text
+										.material-title Название Фирмы
+										p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam architecto atque consequatur cum eius eum ex harum hic impedit modi natus necessitatibus, odio, officia placeat quaerat repellendus, ut. Aspernatur delectus dignissimos eaque facere illo illum in quia ut vitae voluptatem!
+									.material-logo(style="background-image:url('img/label.jpg')")
+								.slider-wrap
+									.slider-control.slider-control--left
+										+icon("arrow-left","icon")
+									.slider-control.slider-control--right
+										+icon("arrow-right","icon")
+									.slider-items.slider-extend.slider-item
+										- for (var j=0;j<3;j++)
+											a(href="img/item-2.jpg" data-fancybox="images"+ j +"" style="background-image:url('img/item-2.jpg')").fancybox.catalog__el.catalog__el-img
+											a(href="img/item-6.jpg" data-fancybox="images"+ j +"" style="background-image:url('img/item-6.jpg')").fancybox.catalog__el.catalog__el-img
+											a(href="img/item-5.jpg" data-fancybox="images"+ j +"" style="background-image:url('img/item-5.jpg')").fancybox.catalog__el.catalog__el-img
+						.pag
+							.pag__el.pag__el--active 1
+							.pag__el 2
+							.pag__el 3
+
+
+	+footer()
+include ./block_html/_script.pug
