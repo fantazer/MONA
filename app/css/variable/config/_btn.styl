@@ -49,6 +49,22 @@
 	.nav-icon
 		fill white
 
+.btn--full
+	@extend .btn
+	color white
+	border 3px solid $mark
+	background: $mark
+	.nav-icon
+		fill white
+	&:hover
+		background-color darken($mark,5)
+	&:active
+		background-color darken($mark,5)
+	input[type="submit"]
+		border 0
+	.nav-icon
+		fill white
+
 .btn--disable
 	@extend .disabled
 	border 1px solid $border-color

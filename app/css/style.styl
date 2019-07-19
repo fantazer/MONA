@@ -467,6 +467,12 @@ select.select-beauty
 	margin-left: auto
 	margin-right: auto
 
+.section-title--sm
+	font-size: 26px
+	margin-bottom: 50px
+
+
+
 .section-title-sub
 	text-align: center
 	font-weight: 500
@@ -797,3 +803,140 @@ select.select-beauty
 	left 0
 .bind-slider
 	width: 55%
+
+.catalog
+	display: grid
+	grid-gap 30px
+	grid-template-columns: repeat(3, 1fr)
+
+.catalog__el
+	br(10px)
+	bsh-hover()
+	overflow: hidden
+	cp()
+	border 1px solid #f6f6f6
+.catalog__el-img
+	bg-full()
+	padding: 35% 10%
+.catalog__el-content
+	padding: 30px 20px
+.catalog__el-title
+	@extend .type--md
+	line-height: 1.6
+	font-weight: 700
+	color $mark
+	margin-bottom: 10px
+	font-size: 18px
+
+.catalog__el-title--simple
+	margin-bottom: 0
+.catalog__el-text
+	line-height: 1.6
+	font-size: 14px
+
+.tag
+	f()
+	align-items: center
+	justify-content: center
+	fw()
+	max-width 768px
+	margin:-50px auto 40px auto
+
+.tag__el
+	cp()
+	br(20px)
+	tr()
+	padding: 5px 15px
+	margin-right: 10px
+	margin-bottom: 10px
+	border 1px solid $border-color
+	display: inline-block
+	&:hover
+		border-color $mark
+		color $mark
+
+.tag__el--active
+	border-color $mark
+	color $mark
+
+.catalog--simple
+	.catalog__el-title
+		margin-bottom: 0
+
+.pag
+	flex(mid)
+	fw()
+	margin: 40px 0
+.pag__el
+	flex(mid)
+	cp()
+	tr()
+	margin: 10px
+	padding: 10px 15px
+	border 1px solid $border-color
+	display: inline-block
+	&:hover
+		border-color $mark
+		color $mark
+.pag__el--active
+	border-color $mark
+	color $mark
+
+.item
+	f()
+	justify-content: space-between
+	align-items: flex-start
+	.content-slider__el
+		padding: 35% 10%
+	margin-bottom: 0px
+.item-slider
+	width: 60%
+.item-content
+	width: 30%
+.item-price
+	font-size: 26px
+	font-weight: 700
+	color black
+	margin-bottom: 30px
+.item-callback
+	margin-bottom: 30px
+.item-callback-text
+	display: inline-block
+	margin-bottom: 10px
+	font-size: 26px
+.item-get
+	f()
+	fl()
+	align-items: flex-start
+	margin-bottom: 20px
+	.btn--md
+		margin-bottom: 20px
+		width: 250px
+//.btn--mark
+//.btn--full
+.item-designer
+	a
+		font-weight: 700
+		link()
+
+.book-row
+	f()
+	align-items: flex-end
+	margin-bottom: 20px
+	fw()
+.book-row__title
+	max-width: 80%
+	line-height: 1.6
+	font-weight:700
+	color black
+
+.book-row__dot
+	border-bottom 1px dashed #00000017
+	flex-grow 1
+.book-row__value
+	white-space nowrap
+	vertical-align: bottom
+	font-weight: 500
+
+.item-config
+	max-width 768px

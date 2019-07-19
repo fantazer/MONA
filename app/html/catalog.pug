@@ -1,0 +1,28 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+header()
+	.content
+		.section.section--clear
+			.main-cont
+				.bread
+					-
+						var items = ['Главная','Категория','Страница'];
+					each item in items
+						a(href="#").bread__el #{item}
+				.section-title-row
+					.section-title
+						span Каталог
+						.section-title-line
+					.section-title-sub Мебель в частных интерьерах
+
+				.catalog
+					- for (var i=0;i<9;i++)
+						a(href="#").catalog__el
+							.catalog__el-img(style="background-image:url('img/item-2.jpg')")
+							.catalog__el-content
+								.catalog__el-title Классические кухни
+								.catalog__el-text Кухни для тех, кто любит уют и ценит традиции. Натуральное дерево итальянских фасадов, дизайн итальянских мастеров
+	+footer()
+include ./block_html/_script.pug

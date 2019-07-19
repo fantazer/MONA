@@ -1,0 +1,44 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+header()
+	.content
+		.section.section--clear
+			.main-cont
+				.bread
+					-
+						var items = ['Главная','Категория','Страница'];
+					each item in items
+						a(href="#").bread__el #{item}
+				.section-title-row
+					.section-title
+						span Гостиные и горки
+						.section-title-line
+				.tag
+					-
+						var items = [
+							'Встроенные',
+							'Гардеробные',
+							'Для прихожей',
+							'Для спальни',
+							'Зеркальные',
+							'Классические',
+							'С рисунком',
+							'Современные '
+							];
+					each item,i in items
+						.tag__el(class=i===0?'tag__el--active':'') #{item}
+				.catalog.catalog--simple
+					- for (var i=0;i<9;i++)
+						a(href="#").catalog__el
+							.catalog__el-img(style="background-image:url('img/item-5.jpg')")
+							.catalog__el-content
+								.catalog__el-title Изготовление мебели
+				.pag
+					.pag__el.pag__el--active 1
+					.pag__el 2
+					.pag__el 3
+
+	+footer()
+include ./block_html/_script.pug
