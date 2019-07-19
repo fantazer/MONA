@@ -33,7 +33,7 @@
                 <div class="main-cont">
                     <div class="header-top">
                         <a class="logo" href="#">
-                            <img src="img/logo.png" alt="" />
+                            <img src="img/logo.svg" alt="" />
                         </a>
                         <a class="header-top-phone" href="tel:8 800 000 00 00">
                             <div class="header-top-phone__icon">
@@ -61,6 +61,14 @@
                             </a>
                         </div>
                         <div class="header-top-callback">Заказать звонок</div>
+                        <div class="head-toggle">
+                            <svg class="icon icon-open">
+                                <use xlink:href="#menu"></use>
+                            </svg>
+                            <svg class="icon icon-close">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -73,6 +81,40 @@
                         <a class="nav__el" href="#">Контакты</a>
                     </div>
                 </div>
+            </div>
+            <div class="slide-menu">
+                <a class="header-top-phone" href="tel:8 800 000 00 00">
+                    <div class="header-top-phone__icon">
+                        <svg class="icon">
+                            <use xlink:href="#phone-call"></use>
+                        </svg>
+                    </div>
+                    <div class="header-top-phone__val">8 800 000 00 00</div>
+                </a>
+                <div class="slide-menu__list">
+                    <a class="slide-menu__list-el" href="#">Каталог</a>
+                    <a class="slide-menu__list-el" href="#">О компании</a>
+                    <a class="slide-menu__list-el" href="#">Производство</a>
+                    <a class="slide-menu__list-el" href="#">Контакты</a>
+                </div>
+                <div class="soc-row">
+                    <a class="soc-row__el" href="#">
+                        <svg class="icon">
+                            <use xlink:href="#soc-facebook"></use>
+                        </svg>
+                    </a>
+                    <a class="soc-row__el" href="#">
+                        <svg class="icon">
+                            <use xlink:href="#soc-instagram"></use>
+                        </svg>
+                    </a>
+                    <a class="soc-row__el" href="#">
+                        <svg class="icon">
+                            <use xlink:href="#soc-youtube"></use>
+                        </svg>
+                    </a>
+                </div>
+                <div class="header-top-callback">Заказать звонок</div>
             </div>
         </div>
         <!--block header end-->
@@ -184,7 +226,7 @@
                 <div class="main-cont">
                     <div class="footer-top">
                         <a class="footer-top__logo" href="/">
-                            <img src="img/logo.png" alt="" />
+                            <img src="img/logo.svg" alt="" />
                         </a>
                         <a class="header-top-phone" href="tel:">
                             <div class="header-top-phone__icon">
@@ -332,7 +374,7 @@
                 </div>
             </div>
         </div>
-        <a class="modal-get" href="#" data-modal="order">Открыть модальное окно</a>
+        <!--a(href="#" data-modal="order").modal-get Открыть модальное окно-->
         <!--block footer end-->
     </div>
     <!--build:js js/combined.js-->

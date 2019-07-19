@@ -67,7 +67,7 @@ body
 .modal-content
 	+below(640px)
 		height: 100%
-		padding: 20px 10px
+		padding: 40px 20px
 		overflow-y scroll
 		width: 100%!important
 		br(0)
@@ -91,6 +91,8 @@ body
 	right: 0px
 	cp()
 	.icon
+		+below(640px)
+			fill $mark
 		size 16px
 		fill white
 
@@ -279,14 +281,14 @@ select.select-beauty
 
 // slide menu
 .head-toggle
-	size 50px
+	size 30px
 	flex(mid)
 	cp()
 	+above(1025px)
 		display: none
 	.icon
 		size 25px
-		fill white
+		fill black
 	.icon-close
 		display: none
 
@@ -303,17 +305,34 @@ select.select-beauty
 		top: 51px //Высота хедера
 	+below(480px)
 		width: 100%
-	background: black
+	background: $mark
 	color white
 	position: fixed
 	height: calc(100% - 50px) //Отступ хедер
 	z-index 1250
 	top 54px
 	right 0
-	padding: 25px
+	padding: 40px
 	width: 320px
 	transform translateX(100%)
 	tr(all)
+	.soc-row
+		margin-bottom: 30px
+	.soc-row__el
+		border-color white
+		.icon
+			fill white
+	.header-top-phone__icon
+		border-color white
+		.icon
+			fill white
+	.header-top-phone
+		margin-bottom: 30px
+		justify-content: flex-start
+	.header-top-phone__val
+		font-size: 18px
+		color white
+
 .slide-menu--open
 	transform translateX(0%)
 	overflow-y: auto
@@ -324,10 +343,8 @@ select.select-beauty
 	margin-bottom: 40px
 	color white
 	font-size: 16px
-	up()
 	tr(all)
-	&:hover
-		color red
+	font-weight: 700
 .body-fix
 	position: fixed!important
 	overflow-Y: scroll!important
@@ -378,10 +395,24 @@ select.select-beauty
 	border 1px solid $border-color
 //.main-cont
 .header-top
+	+below(1024px)
+		padding: 10px 0
+		.soc-row
+			display: none
+		.header-top-phone
+			display: none
+		.header-top-callback
+			display: none
+
 	flex(between)
 	padding: 20px 0
-//.logo
+.logo
+	width: 130px
+	+below(1024px)
+		img
+			width: 100px
 .header-top-phone
+
 	flex(mid)
 .header-top-phone__icon
 	border-radius 0 14px
@@ -393,6 +424,8 @@ select.select-beauty
 		size 18px
 		fill $mark
 .header-top-phone__val
+	+below(480px)
+		font-size: 20px
 	color $mark
 	font-size 24px
 	font-weight: 900
@@ -402,8 +435,12 @@ select.select-beauty
 .header-top-callback
 	@extend .btn--md
 	@extend .btn--mark
+
 .nav-cont
+	+below(1024px)
+		display: none
 	border-bottom 1px solid $border-color
+
 .nav
 	flex(between)
 .nav__el
@@ -415,13 +452,21 @@ select.select-beauty
 	filter()
 	background: #4c2b5b47
 .main-slider__el
+	+below(768px)
+		min-height 250px
 	bg-full()
+	height: 100%
 	padding: 15% 10%
 	display: block
+
+.main-slider__el-wrap
+	position: relative
 
 .main-slider-wrap, .slider--arrows
 	position: relative
 	.slider-control
+		+below(640px)
+			display: none
 		size 64px
 		flex(mid)
 		background: rgba(255, 255, 255, 0.45)
@@ -432,6 +477,8 @@ select.select-beauty
 	.slider-control--right
 		right: 0
 .slider-control
+	+below(1024px)
+		display: none
 	flex(mid)
 	tr(all)
 	size 40px
@@ -452,6 +499,8 @@ select.select-beauty
 	right -50px
 
 .section
+	+below(768px)
+		padding: 40px 0
 	padding: 100px 0
 
 .section--dark
@@ -460,9 +509,13 @@ select.select-beauty
 	padding-top: 0
 
 .section-title-row
+	+below(640px)
+		overflow: hidden
 	flex(mid)
 	fl()
 .section-title
+	+below(768px)
+		margin-bottom: 60px
 	font-weight: 900
 	text-align: center
 	@extend .type--xl
@@ -481,6 +534,12 @@ select.select-beauty
 
 
 .section-title-sub
+	+below(1024px)
+		font-size: 18px
+		margin-bottom: 30px
+		margin-top: -70px
+	+below(768px)
+		margin-top: -20px
 	text-align: center
 	font-weight: 500
 	margin-top: -50px
@@ -496,6 +555,11 @@ select.select-beauty
 	left 50%
 	transform translateX(-50%)
 .advant
+	+below(1024px)
+		grid-template-columns: repeat(2, 1fr)
+	+below(760px)
+		grid-template-columns: 1fr
+		grid-gap 30px
 	display: grid
 	grid-gap 70px
 	grid-template-columns: repeat(3, 1fr)
@@ -515,6 +579,8 @@ select.select-beauty
 	margin-bottom: 5px
 	color $mark
 .advant__el-text
+	+below(640px)
+		font-size: 12px
 	line-height: 1.6
 	font-size: 14px
 .advant__el-slogan
@@ -526,11 +592,17 @@ select.select-beauty
 	color $mark
 
 .list
+	+below(768px)
+		grid-template-columns: repeat(2, 1fr)
+	+below(480px)
+		grid-template-columns: 1fr
 	display: grid
 	grid-gap 30px
 	grid-template-columns: repeat(3, 1fr)
 
 .list__el
+	+below(480px)
+		f()
 	br(10px)
 	bsh-hover()
 	overflow: hidden
@@ -540,12 +612,25 @@ select.select-beauty
 
 
 .list__el-img
+	+below(480px)
+		padding: 15% 10%
+		width: 40%
 	bg-full()
 	padding: 35% 10%
 .list__el-content
+	+below(640px)
+		padding: 20px
+	+below(480px)
+		width: 60%
+		text-align: left
+
 	padding: 20px 40px
 	text-align: center
 .list__el-title
+	+below(480px)
+		text-align: left
+		line-height: 1.2
+		margin-bottom: 5px
 	@extend .type--md
 	line-height: 1.6
 	font-weight: 700
@@ -553,13 +638,19 @@ select.select-beauty
 	text-align: center
 	font-size: 18px
 .list__el-text
+	+below(480px)
+		font-size: 12px
 	line-height: 1.6
 	font-size: 14px
 
 .slider-extend
 	.slick-slide
+		+below(640px)
+			margin: 0 5px
 		margin: 0 30px
 	.slick-list
+		+below(1440px)
+			margin: 0
 		margin: 0 -30px
 
 .slick-slide
@@ -585,7 +676,7 @@ select.select-beauty
 	flex(mid)
 	fl()
 	tr()
-	transform translateY(-100%)
+	transform translateY(-110%)
 .sale__el-more-text
 	color white
 .sale__el-img
@@ -614,25 +705,31 @@ select.select-beauty
 
 
 .designer
+	+below(768px)
+		grid-template-columns: repeat(2, 1fr)
 	display: grid
 	grid-gap 20px
 	grid-template-columns: repeat(4, 1fr)
 
 .designer__el
+	+below(768px)
+		padding: 60% 10%
 	br(10px)
 	bsh-hover()
-	overflow: hidden
 	cp()
-	position: relative
 	bg-full()
 	bsh()
+	overflow: hidden
 	padding: 70% 10%
+	position: relative
 	tr()
 	transform scale(1)
 	&:hover
 		box-shadow 0px 8px 30px #bebaba
 		transform scale(1.02)
 .designer__el-info
+	+below(640px)
+		padding: 15px 10px
 	position: absolute
 	bottom: 0
 	padding: 20px
@@ -643,6 +740,8 @@ select.select-beauty
 		background: rgba(63, 33, 76, 0.45)
 
 .designer__el-name
+	+below(640px)
+		font-size: 12px
 	z-index 1
 	position: relative
 	@extend .type--md
@@ -659,16 +758,17 @@ select.select-beauty
 	width: 100%
 	bottom -50px
 	.dot
-			background: $mark
-			width: 24px
-			height: 6px
-			display: block
-			br(3px)
-			border 1px solid #e7e7e7
+		background: #4c2b5b17
+		width: 24px
+		height: 6px
+		display: block
+		br(3px)
+		border 1px solid #e7e7e7
 	.slick-active
 			.dot
-					border 1px solid transparent
-					background: $pink
+				border 1px solid transparent
+				background: $pink
+				background: $mark
 
 .designer-all
 	text-align: center
@@ -679,16 +779,26 @@ select.select-beauty
 	flex(mid)
 
 .contact
+	+below(640px)
+		fw()
 	f()
 	justify-content: space-between
 	align-items: stretch
 .contact-info
-	position: relative
+	+below(768px)
+		padding: 30px
+	+below(640px)
+		width: 100%
+		padding: 20% 10%
 	bg-full()
-	width: 50%
 	f()
 	fl()
+	position: relative
+	width: 50%
 	padding: 60px
+.contact-get
+	+below(640px)
+		width: 100%
 //.filter
 .contact-info__title
 	@extend .type--xl
@@ -700,16 +810,27 @@ select.select-beauty
 	color white
 	position: relative
 .contact-form
+	+below(768px)
+		padding: 30px
+	+below(640px)
+		width: 100%
 	width: 50%
 	padding: 60px 10%
 	background: #f9f7fa
 //.input-row
 //.input
 
+.footer-top__logo
+	width: 140px
 .footer-top-wrap
 	border 1px solid $border-color
 	padding: 20px
 .footer-top
+	+below(768px)
+		+below(640px)
+			fl()
+			.header-top-phone
+				margin: 20px 0
 	flex(between)
 
 .footer
@@ -717,6 +838,8 @@ select.select-beauty
 		border 0
 
 .footer-location
+	+below(760px)
+		display: none
 	flex(between)
 	padding:40px 0
 
@@ -737,7 +860,7 @@ select.select-beauty
 
 .bread
 	+below(640px)
-		display: none
+		padding: 20px 0
 	f()
 	fw()
 	padding: 30px 0 40px 0
@@ -785,14 +908,23 @@ select.select-beauty
 	border 1px solid $border-color
 
 .bind
+	+below(768px)
+		max-width 640px
+		fw()
+		margin: 30px auto 0 auto
 	f()
 	justify-content: space-between
 	margin: 60px 0
 	.content-slider__el
 		padding: 35% 10%
 	.dot
+		+below(768px)
+			display: block
 		display: none
 .bind-info
+	+below(768px)
+		width: 100%
+		margin-bottom: 20px
 	width: 35%
 .bind-info__title
 	margin-bottom: 20px
@@ -806,6 +938,7 @@ select.select-beauty
 		margin-bottom: 10px
 		line-height: 1.6
 .bind-info__map
+	min-height 200px
 	position: relative
 	padding: 20% 10%
 .bind-info__map-el
@@ -816,25 +949,46 @@ select.select-beauty
 	top 0
 	left 0
 .bind-slider
+	+below(768px)
+		width: 100%
 	width: 55%
 
 .catalog
+	+below(768px)
+		grid-gap 15px
+	+below(700px)
+		grid-template-columns: repeat(2, 1fr)
+	+below(480px)
+		grid-template-columns: 1fr
 	display: grid
 	grid-gap 30px
 	grid-template-columns: repeat(3, 1fr)
-
+	.catalog__el-img
+		position: static
+		padding: 30% 10%
 .catalog__el
 	br(10px)
 	bsh-hover()
 	overflow: hidden
 	cp()
 	border 1px solid #f6f6f6
+.catalog__el-wrap
+	padding: 35% 10%
+	position: relative
 .catalog__el-img
 	bg-full()
-	padding: 35% 10%
+	position: absolute
+	width: 100%
+	height: 100%
+	left: 0
+	top 0
 .catalog__el-content
+	+below(640px)
+		padding: 15px
 	padding: 30px 20px
 .catalog__el-title
+	+below(768px)
+		font-size: 14px
 	@extend .type--md
 	line-height: 1.6
 	font-weight: 700
@@ -845,10 +999,14 @@ select.select-beauty
 .catalog__el-title--simple
 	margin-bottom: 0
 .catalog__el-text
+	+below(768px)
+		font-size: 12px
 	line-height: 1.6
 	font-size: 14px
 
 .tag
+	+below(768px)
+		margin-top: -20px
 	f()
 	align-items: center
 	justify-content: center
@@ -857,6 +1015,8 @@ select.select-beauty
 	margin:-50px auto 40px auto
 
 .tag__el
+	+below(640px)
+		font-size: 10px
 	cp()
 	br(20px)
 	tr()
@@ -897,6 +1057,11 @@ select.select-beauty
 	color $mark
 
 .item
+	+below(1024px)
+		max-width 640px
+		margin-left: auto
+		margin-right: auto
+		fw()
 	f()
 	justify-content: space-between
 	align-items: flex-start
@@ -904,10 +1069,18 @@ select.select-beauty
 		padding: 35% 10%
 	margin-bottom: 0px
 .item-slider
+	+below(1024px)
+		width: 100%
+		margin-bottom: 30px
 	width: 60%
 .item-content
+	+below(1024px)
+		width: 100%
 	width: 30%
 .item-price
+	+below(768px)
+		font-size: 18px
+		margin-bottom: 20px
 	font-size: 26px
 	font-weight: 700
 	color black
@@ -915,10 +1088,15 @@ select.select-beauty
 .item-callback
 	margin-bottom: 30px
 .item-callback-text
-	display: inline-block
+	+below(768px)
+		font-size: 18px
+	display: block
 	margin-bottom: 10px
 	font-size: 26px
 .item-get
+	+below(480px)
+		.btn--md
+			width: 100%!important
 	f()
 	fl()
 	align-items: flex-start
@@ -934,20 +1112,31 @@ select.select-beauty
 		link()
 
 .book-row
+	+below(640px)
+		border-bottom 1px solid $border-color
+		padding-bottom: 10px
+		margin-bottom: 10px
 	f()
 	align-items: flex-end
 	margin-bottom: 20px
 	fw()
 .book-row__title
+	+below(480px)
+		width: 100%
 	max-width: 80%
 	line-height: 1.6
 	font-weight:700
 	color black
 
 .book-row__dot
+	+below(640px)
+		display: none
 	border-bottom 1px dashed #00000017
 	flex-grow 1
 .book-row__value
+	+below(640px)
+		width: 100%
+		white-space initial
 	white-space nowrap
 	vertical-align: bottom
 	font-weight: 500
@@ -971,10 +1160,18 @@ select.select-beauty
 
 
 .material
+	+below(960px)
+		max-width 640px
+		margin-left: auto
+		margin-right: auto
+		fw()
 	f()
 	justify-content: space-between
 	align-items: flex-start
 .toolbar
+	+below(960px)
+		width: 100%
+		margin-bottom: 20px
 	width: 300px
 	border 1px solid $border-color
 	background: white
@@ -1006,15 +1203,28 @@ select.select-beauty
 		top 20px
 		background: black
 .material-cont
+	+below(1200px)
+		width calc(100% - 350px)
+	+below(960px)
+		width: 100%
 	width calc(100% - 400px)
 .material-descr
+	+below(480px)
+		fw()
 	f()
 	justify-content: space-between
 	align-items: flex-start
 	margin-bottom: 30px
 .material-info
+	+below(1280px)
+		.slider-control
+			display: none
+		.dot
+			display: block
 	margin-bottom: 80px
 .material-text
+	+below(480px)
+		width: 100%
 	width calc(100% - 150px)
 .material-title
 	@extend .type--lg
@@ -1022,6 +1232,8 @@ select.select-beauty
 	margin-bottom: 20px
 	color $mark
 .material-logo
+	+below(480px)
+		display: none
 	size 120px
 	bsh()
 	br(10px)
@@ -1031,15 +1243,23 @@ select.select-beauty
 	border 10px solid white
 
 .news__el
+	+below(480px)
+		fw()
 	f()
 	justify-content: space-between
 	align-items: flex-start
 	margin-bottom: 40px
 .news__el-img
+	+below(480px)
+		width: 100%
+		min-height 200px
+		margin-bottom: 30px
 	width: 35%
 	bg-full()
 	padding: 15% 10%
 .news__el-cont
+	+below(480px)
+		width: 100%
 	width calc(65% - 40px)
 .news__el-title
 	@extend .type--lgx
@@ -1048,15 +1268,27 @@ select.select-beauty
 	color black
 	display: inline-block
 .news__el-date
+	+below(480px)
+		margin-bottom: 20px
 	margin-bottom: 30px
 
 
 .staff
+	+below(640px)
+		fl()
+		fw()
+		margin-left: auto
+		margin-right: auto
+		max-width 480px
 	f()
 	justify-content: space-between
 	align-items: flex-start
 	margin-bottom: 40px
 .staff__el-img
+	+below(640px)
+		width: 100%
+		padding: 60% 10%
+		margin: 0 auto 40px auto
 	width: 35%
 	bg-full()
 	padding: 20% 10%
@@ -1064,6 +1296,8 @@ select.select-beauty
 	background-position: top center
 	br(10px)
 .staff__el-cont
+	+below(640px)
+		width: 100%
 	width calc(60% - 40px)
 .staff__el-title
 	@extend .type--lgx
@@ -1075,9 +1309,13 @@ select.select-beauty
 .staff__el-loc
 	margin-bottom: 30px
 .staff__el-info
+	+below(768px)
+		fw()
 	flex(between)
 	margin-bottom: 30px
 .staff__el-phone
+	+below(768px)
+		margin-bottom: 20px
 	f()
 	align-items: center
 .staff__el-get

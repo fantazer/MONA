@@ -5,7 +5,7 @@ mixin header()
 			.main-cont
 				.header-top
 					a(href="#").logo
-						img(src="img/logo.png", alt="")
+						img(src="img/logo.svg", alt="")
 					a(href="tel:8 800 000 00 00").header-top-phone
 						.header-top-phone__icon
 							+icon("phone-call","icon")
@@ -22,6 +22,9 @@ mixin header()
 								svg(class='icon')
 									use(xlink:href="#" + item)
 					.header-top-callback Заказать звонок
+					.head-toggle
+						+icon("menu","icon icon-open")
+						+icon("close","icon icon-close")
 		.nav-cont
 			.main-cont
 				.nav
@@ -30,4 +33,27 @@ mixin header()
 					a(href="#").nav__el Производство
 					a(href="#").nav__el Контакты
 
+
+		.slide-menu
+			a(href="tel:8 800 000 00 00").header-top-phone
+				.header-top-phone__icon
+					+icon("phone-call","icon")
+				.header-top-phone__val 8 800 000 00 00
+			.slide-menu__list
+				a(href="#").slide-menu__list-el Каталог
+				a(href="#").slide-menu__list-el О компании
+				a(href="#").slide-menu__list-el Производство
+				a(href="#").slide-menu__list-el Контакты
+			.soc-row
+				-
+					var items = [
+					'soc-facebook',
+					'soc-instagram',
+					'soc-youtube'
+					];
+				each item in items
+					a(href="#").soc-row__el
+						svg(class='icon')
+							use(xlink:href="#" + item)
+			.header-top-callback Заказать звонок
 	//block header end

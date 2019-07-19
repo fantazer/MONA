@@ -5,14 +5,17 @@ include block_html/_include.pug
 	+header()
 	.content
 		.main-slider-wrap.slider-wrap
-			.filter
 			.slider-control.slider-control--left
 				+icon("arrow-left","icon")
 			.slider-control.slider-control--right
 				+icon("arrow-right","icon")
 			.main-slider.slider-item
-				a(href="#" style="background-image:url('img/main-slider-1.jpg')" class="main-slider__el")
-				a(href="#" style="background-image:url('img/main-slider-1.jpg')" class="main-slider__el")
+				.main-slider__el-wrap
+					a(href="#" style="background-image:url('img/main-slider-1.jpg')" class="main-slider__el")
+					.filter
+				.main-slider__el-wrap
+					a(href="#" style="background-image:url('img/main-slider-1.jpg')" class="main-slider__el")
+					.filter
 
 		.section
 			.main-cont
@@ -61,7 +64,7 @@ include block_html/_include.pug
 					a(href="#").list__el
 						.list__el-img(style="background-image:url('img/list-1.jpg')")
 						.list__el-content
-							.list__el-title До мелочей
+							.list__el-title До каждой мелочи
 							.list__el-text Изделия продуманы до мелочей и каждой детали
 					a(href="#").list__el
 						.list__el-img(style="background-image:url('img/list-2.jpg')")
@@ -171,6 +174,6 @@ include block_html/_include.pug
 								input(type="text" placeholder="Ваш email" class="input")
 							.input-row
 								textarea(name="", cols="30", rows="5" placeholder="Ваш коментарий" class="input")
-								input(type="submit" value="Отправить" class="btn--md btn--mark")
+								input(type="submit" value="Отправить" class="btn--md btn--mark contact-get")
 	+footer()
 include ./block_html/_script.pug

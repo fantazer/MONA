@@ -44,11 +44,14 @@ include block_html/_include.pug
 										+icon("arrow-left","icon")
 									.slider-control.slider-control--right
 										+icon("arrow-right","icon")
-									.slider-items.slider-extend.slider-item
+									.slider-items.slider-item
 										- for (var j=0;j<3;j++)
-											a(href="img/item-2.jpg" data-fancybox="images"+ j +"" style="background-image:url('img/item-2.jpg')").fancybox.catalog__el.catalog__el-img
-											a(href="img/item-6.jpg" data-fancybox="images"+ j +"" style="background-image:url('img/item-6.jpg')").fancybox.catalog__el.catalog__el-img
-											a(href="img/item-5.jpg" data-fancybox="images"+ j +"" style="background-image:url('img/item-5.jpg')").fancybox.catalog__el.catalog__el-img
+											.catalog__el-wrap
+												a(href="img/item-2.jpg" data-fancybox="images"+ j +"" style="background-image:url('img/item-2.jpg')").fancybox.catalog__el.catalog__el-img
+											.catalog__el-wrap
+												a(href="img/item-6.jpg" data-fancybox="images"+ j +"" style="background-image:url('img/item-6.jpg')").fancybox.catalog__el.catalog__el-img
+											.catalog__el-wrap
+												a(href="img/item-5.jpg" data-fancybox="images"+ j +"" style="background-image:url('img/item-5.jpg')").fancybox.catalog__el.catalog__el-img
 						.pag
 							.pag__el.pag__el--active 1
 							.pag__el 2

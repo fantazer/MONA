@@ -151,6 +151,30 @@ $(document).ready(function () {
 			slidesToShow:3,
 			speed: 500,
 			arrows: false,
+			customPaging : function(slider, i) {
+					return '<span class="dot"></span>';
+			},
+			dots:true,
+			responsive: [
+
+			{
+				breakpoint: 840,
+				settings: {
+					arrows: false,
+					centerMode: true,
+					centerPadding: '40px',
+					slidesToShow: 2
+				}
+			},
+			{
+				breakpoint: 480,
+				settings: {
+					arrows: false,
+					centerMode: true,
+					centerPadding: '50px',
+					slidesToShow: 1
+				}
+			}]
 			//autoplay: true,
 			//dots:false,
 			//fade: true
@@ -179,6 +203,26 @@ $(document).ready(function () {
 				return '<span class="dot"></span>';
 		},
 		dots:true,
+		responsive: [
+    {
+      breakpoint: 840,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '50px',
+        slidesToShow: 1
+      }
+    }
+  ]
 		//autoplay: true,
 		//fade: true
 		//autoplaySpeed: 8000, time between
