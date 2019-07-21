@@ -502,7 +502,7 @@ select.select-beauty
 	+below(768px)
 		padding: 40px 0
 	padding: 100px 0
-
+	overflow-x: hidden
 .section--dark
 	background: #fdfaff
 .section--clear
@@ -972,16 +972,17 @@ select.select-beauty
 	overflow: hidden
 	cp()
 	border 1px solid #f6f6f6
+	display: block
 .catalog__el-wrap
-	padding: 35% 10%
 	position: relative
 .catalog__el-img
+	padding: 35% 10%
 	bg-full()
-	position: absolute
+	//position: absolute
 	width: 100%
-	height: 100%
 	left: 0
 	top 0
+	//height: 100%
 .catalog__el-content
 	+below(640px)
 		padding: 15px
