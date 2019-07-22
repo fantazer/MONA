@@ -2121,10 +2121,8 @@ select.select-beauty {
     padding: 20% 10%;
   }
 }
-@media only screen and (max-width: 640px) {
-  .contact-get {
-    width: 100%;
-  }
+.contact-get {
+  width: 100%;
 }
 .contact-info__title {
   font-weight: 900;

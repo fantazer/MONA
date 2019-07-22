@@ -8,7 +8,7 @@
     display: inline-block;
     background-image: url("../svg/sprite.svg");
     background-repeat: no-repeat;
-    background-size: 61.2014em 1806.2em;
+    background-size: 61.2014em 1785.4em;
 }
 
 .no-svg .icon:before {
@@ -541,15 +541,15 @@
 
   .icon.worker-color:before {
       background-position: 0em -1716.6em;
-      width: 29.3959em;
-      height: 28.285000000000004em;
+      width: 7.7777em;
+      height: 7.4838em;
   }
 
 
 
 
   .icon.zoom-plus-sign:before {
-      background-position: 0em -1744.9em;
+      background-position: 0em -1724.1em;
       width: 61.2014em;
       height: 61.2014em;
   }
